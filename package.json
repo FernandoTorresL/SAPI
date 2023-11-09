@@ -1,0 +1,31 @@
+{
+  "name": "sapi",
+  "version": "1.0.0",
+  "description": "Full Node.js demo REST API for 'Subdelegaciones IMSS'. New exercise based on \"Let's Build a Node.js REST API\" blog serie from Victoria Lo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FernandoTorresL/SAPI.git"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "express",
+    "mongodb",
+    "subdelegaciones",
+    "imss",
+    "node"
+  ],
+  "author": "Fer Torres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FernandoTorresL/SAPI/issues"
+  },
+  "homepage": "https://github.com/FernandoTorresL/SAPI#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
