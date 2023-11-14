@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const mongoString = process.env.DATABASE_URL
+const routes = require('./routes/routes');
 
 // Connect to DB
 mongoose.connect(mongoString);
@@ -22,6 +23,9 @@ const app = express();
 
 // Parse incoming requests with JSON payloads
 app.use(express.json());
+// All our endpoints will start with '/sub'.
+app.use('/api/sub', routes);
+
 
 // Listen on port defined on .env file or use 3001
 const listener = app.listen(process.env.PORT || 3001, () => {
