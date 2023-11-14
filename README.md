@@ -113,6 +113,7 @@ $ [nodemon] watching path(s): *.*
 $ [nodemon] watching extensions: js,mjs,cjs,json
 $ [nodemon] starting `node index.js`
 $ App started and listening on port 3000
+$ Database connected!
 ```
 
 > This prompt may vary if you use another shell configuration or operating system, like pk10, git bash, WSL, Linux...
