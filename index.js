@@ -8,14 +8,8 @@ const helmet = require('helmet');
 const compression = require('compression');
 
 // Connect to DB
-mongoose.connect(mongoString, {
-    server: {
-        socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 }
-    },
-    replset: {
-        socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 }
-    }
-});
+mongoose.connect(mongoString);
+
 const database = mongoose.connection;
 
 // Test connection
