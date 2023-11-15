@@ -14,6 +14,8 @@ Full Node.js demo REST API for 'Subdelegaciones IMSS'. New exercise based on "Le
 * [Installation](#installation)
 * [Start server](#start-server)
 * [Test routes](#test-routes)
+* [Contributing to this repo](#contributing-to-this-repo)
+* [Follow Me](#follow-me)
 
 ## Introduction
 
@@ -231,6 +233,7 @@ For example, to test this method use this values on Postman (check image below):
 
 ---
 
+## Follow me
 <p align="center">
     <a href="https://www.buymeacoffee.com/fertorresmx"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=fertorresmx&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a>
 </p>
@@ -241,11 +244,9 @@ For example, to test this method use this values on Postman (check image below):
   </a>
 </div>
 
-
-## Follow me
-[fertorresmx.dev](https://fertorresmx.dev/)
-
-<img alt="X (formerly Twitter) Follow" src="https://img.shields.io/twitter/follow/fertorresmx">
+<div align="center">
+  <img alt="X (formerly Twitter) Follow" src="https://img.shields.io/twitter/follow/FerTorresMx">
+</div>
 
 
-#### [Twitter](https://twitter.com/FerTorresMx), [Instagram](https://www.instagram.com/fertorresmx/): @fertorresmx
+
