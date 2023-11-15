@@ -4,9 +4,18 @@ const express = require('express');
 const mongoose = require('mongoose');
 const mongoString = process.env.DATABASE_URL
 const routes = require('./routes/routes');
+const helmet = require('helmet');
+const compression = require('compression');
 
 // Connect to DB
-mongoose.connect(mongoString);
+mongoose.connect(mongoString, {
+    server: {
+        socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 }
+    },
+    replset: {
+        socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 }
+    }
+});
 const database = mongoose.connection;
 
 // Test connection
@@ -21,10 +30,20 @@ database.once('connected', () => {
 // Transfer the content of Express into constant app
 const app = express();
 
+app.use(helmet());
+app.use(compression()); //Compress all routes
+
 // Parse incoming requests with JSON payloads
 app.use(express.json());
+
 // All our endpoints will start with '/sub'.
 app.use('/api/sub', routes);
+
+app.route('/')
+    .get(function (req, res) {
+        res.sendFile(process.cwd() + '/index.html');
+    }
+    );
 
 
 // Listen on port defined on .env file or use 3001
