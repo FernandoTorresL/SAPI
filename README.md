@@ -12,6 +12,9 @@ Full Node.js demo REST API for 'Subdelegaciones IMSS'. New exercise based on "Le
 * [Technologies](#technology-used)
 * [Tools](#tools)
 * [Installation](#installation)
+* [Start server](#start-server)
+* [Test routes](#test-routes)
+
 
 
 ## Introduction
@@ -30,18 +33,17 @@ With this API, users can get general info about all the 'Subdelegaciones IMSS' f
 
 ## Technology used
 
-This project was build with the use of: 
+This project was build with the use of:
 
-- Node
-- Express
-- MongoDB
 - Javascript
+- MongoDB
+- Express
+- Node
 
 ## Tools
 
 - Postman
 - Visual Studio Code
-- Git & Github
 
 ## Installation
 
@@ -98,7 +100,7 @@ $
 ```sh
 $ npm start
 $
-$ 
+$
 ```
 
 Example output
@@ -106,7 +108,7 @@ Example output
 ```sh
 $ > sapi@1.0.0 start
 $ > nodemon index.js
-$ 
+$
 $ [nodemon] 3.0.1
 $ [nodemon] to restart at any time, enter `rs`
 $ [nodemon] watching path(s): *.*
@@ -117,6 +119,98 @@ $ Database connected!
 ```
 
 > This prompt may vary if you use another shell configuration or operating system, like pk10, git bash, WSL, Linux...
+
+## Test routes
+
+Now, after check that *"Database connected!"* message is on your terminal, you can test your routes using tools like Postman.
+
+### Test */getAll* method
+
+For example, to test this method use this values on Postman (check image below):
+- Method: GET
+- URL: localhost:<port_number>/api/sub/getAll
+- Params:none, Body:none
+- Response: a JSON with all the values on the collection
+
+<a href="https://imgur.com/0BUqUEP"><img src="https://i.imgur.com/0BUqUEP.png" title="Example Postman image" /></a>
+
+### Test */post* method
+
+- Method: POST
+- URL: localhost:<port_number>/api/sub/post
+- Body type: Raw, JSON
+- Body content: A JSON with a valid schema
+
+  Example:
+```txt
+{
+    "name": "Chilpancingo",
+    "subdelegacion_id": 15,
+    "delegacion_id": 21,
+    "old_address": "Domicilio conocido",
+    "num_sub": 50,
+    "status": true
+}
+```
+- Response:
+``` {
+    "name": "Chilpancingo",
+    "subdelegacion_id": 15,
+    "delegacion_id": 21,
+    "old_address": "Domicilio conocido",
+    "num_sub": 50,
+    "status": true,
+    "__v": 0
+}
+```
+
+### Test */getOne/:id* method
+
+- Method: GET
+- URL: localhost:<port_number>/api/sub/getOne/id
+- Params:none, Body:none
+- Response: a JSON with the document data with that id
+
+### Test */update/:id* method
+
+- Method: PATCH
+- URL: localhost:<port_number>/api/sub/update/id
+> Example: localhost:3000/api/sub/update/6554238f791d0509e5795g9c
+- Body type: Raw, JSON
+- Body content: A JSON with a valid schema
+
+  Example:
+```txt
+{
+    "name": "Salina",
+    "subdelegacion_id": 10,
+    "delegacion_id": 200,
+    "old_address": "NA"
+}
+
+```
+- Response (only the indicated data on body will change):
+``` {
+    "_id": "6554238f791d0509e5795g9c",
+    "name": "Salina",
+    "subdelegacion_id": 10,
+    "delegacion_id": 200,
+    "old_address": "NA",
+    "num_sub": 1,
+    "status": true,
+    "__v": 0
+}
+```
+
+### Test */delete/:id* method
+
+- Method: DELETE
+- URL: localhost:<port_number>/api/sub/delete/id
+
+> Example: localhost:3000/api/sub/delete/6554238f791d0509e5795a9c
+- Params:none, Body:none
+- Response:
+> Document with sub tmp has been deleted..
 
 ## Contributing to this repo
 
