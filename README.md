@@ -10,7 +10,6 @@ Full Node.js demo REST API for 'Subdelegaciones IMSS'. New exercise based on "Le
 ## Table of contents 👀
 * [Introduction](#introduction)
 * [Technologies](#technology-used)
-* [Tools](#tools)
 * [Installation](#installation)
 * [Start server](#start-server)
 * [Test routes](#test-routes)
@@ -33,28 +32,14 @@ With this API, users can get general info about all the 'Subdelegaciones IMSS' f
 
 ## Technologies used
 
-This project was build with the use of:
-
 ![MongoDB](https://img.shields.io/static/v1?style=for-the-badge&message=MongoDB&color=47A248&logo=MongoDB&logoColor=FFFFFF&label=)
 ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
 ![Node.js](https://img.shields.io/static/v1?style=for-the-badge&message=Node.js&color=339933&logo=Node.js&logoColor=FFFFFF&label=)
 ![Git](https://img.shields.io/static/v1?style=for-the-badge&message=Git&color=F05032&logo=Git&logoColor=FFFFFF&label=)
 ![GitHub](https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=181717&logo=GitHub&logoColor=FFFFFF&label=)
-
-- Javascript
-- MongoDB
-- Express
-- Node.JS
-- Git
-- Github
-
-## Tools
-
+![Heroku](https://img.shields.io/static/v1?style=for-the-badge&message=Heroku&color=79589f&logo=Heroku&logoColor=FFFFFF&label=)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/static/v1?style=for-the-badge&message=VS+Code&color=007ACC&logo=Visual+Studio+Code&logoColor=FFFFFF&label=)
-
-- Postman
-- Visual Studio Code
 
 ## Installation
 
@@ -222,6 +207,13 @@ For example, to test this method use this values on Postman (check image below):
 - Params:none, Body:none
 - Response:
 > Document with sub tmp has been deleted..
+
+## Deploy
+
+### Deploy on Heroku
+
+We use this guide to [deploy to Heroku](https://dashboard.heroku.com/apps/sapi-api/deploy/heroku-git)
+
 
 ## Contributing to this repo
 
