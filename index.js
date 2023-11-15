@@ -33,6 +33,12 @@ app.use(express.json());
 // All our endpoints will start with '/sub'.
 app.use('/api/sub', routes);
 
+app.route('/')
+    .get(function (req, res) {
+        res.sendFile(process.cwd() + '/index.html');
+    }
+    );
+
 // Listen on port defined on .env file or use 3001
 const listener = app.listen(process.env.PORT || 3001, () => {
     console.log('App started and listening on port ' + listener.address().port)
