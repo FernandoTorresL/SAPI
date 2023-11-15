@@ -14,8 +14,8 @@ Full Node.js demo REST API for 'Subdelegaciones IMSS'. New exercise based on "Le
 * [Installation](#installation)
 * [Start server](#start-server)
 * [Test routes](#test-routes)
-
-
+* [Contributing to this repo](#contributing-to-this-repo)
+* [Follow Me](#follow-me)
 
 ## Introduction
 
@@ -31,16 +31,27 @@ Also, we build this project with the help of this page [How to build a RESTful A
 
 With this API, users can get general info about all the 'Subdelegaciones IMSS' from México. Subdelegaciones are the customer's office for a variety of formalities ono social security.
 
-## Technology used
+## Technologies used
 
 This project was build with the use of:
+
+![MongoDB](https://img.shields.io/static/v1?style=for-the-badge&message=MongoDB&color=47A248&logo=MongoDB&logoColor=FFFFFF&label=)
+![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
+![Node.js](https://img.shields.io/static/v1?style=for-the-badge&message=Node.js&color=339933&logo=Node.js&logoColor=FFFFFF&label=)
+![Git](https://img.shields.io/static/v1?style=for-the-badge&message=Git&color=F05032&logo=Git&logoColor=FFFFFF&label=)
+![GitHub](https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=181717&logo=GitHub&logoColor=FFFFFF&label=)
 
 - Javascript
 - MongoDB
 - Express
-- Node
+- Node.JS
+- Git
+- Github
 
 ## Tools
+
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)
+![Visual Studio Code](https://img.shields.io/static/v1?style=for-the-badge&message=VS+Code&color=007ACC&logo=Visual+Studio+Code&logoColor=FFFFFF&label=)
 
 - Postman
 - Visual Studio Code
@@ -222,16 +233,20 @@ For example, to test this method use this values on Postman (check image below):
 
 ---
 
+## Follow me
+<p align="center">
+    <a href="https://www.buymeacoffee.com/fertorresmx"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=fertorresmx&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a>
+</p>
+
 <div align="center">
     <a href="https://fertorresmx.dev/">
       <img height="150em" src="https://raw.githubusercontent.com/FernandoTorresL/FernandoTorresL/main/media/FerTorres-dev1.png">
   </a>
 </div>
 
+<div align="center">
+  <img alt="X (formerly Twitter) Follow" src="https://img.shields.io/twitter/follow/FerTorresMx">
+</div>
 
 
-## Follow me 
-[fertorresmx.dev](https://fertorresmx.dev/)
-
-#### :globe_with_meridians: [Twitter](https://twitter.com/FerTorresMx), [Instagram](https://www.instagram.com/fertorresmx/): @fertorresmx
 
