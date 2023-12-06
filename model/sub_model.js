@@ -2,46 +2,26 @@ const mongoose = require('mongoose');
 
 const SubdelSchema = new mongoose.Schema({
 
-    formal_sub_name: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    subdelegacion_id: {
-        type: Number,
-        required: true,
-        min: 1,
-        max: 80,
-    },
-    delegacion_id: {
-        type: Number,
-        required: true,
-        min: 1,
-        max: 40,
-    },
-    ciz_id: {
-        type: Number,
-        required: true,
-        enum: [1, 2, 3],
-    },
-    with_ofi_cob: {
-        type: Boolean,
-        required: true,
-    },
-    address:
-        {
-            old_address: {type: String, required: true},
-            new_address: {type: String, required: true},
-            street: {type: String, required: true},
-            street_num: {type: String, required: true},
-            reference: {type: String, required: true},
-            col: {type: String},
-            mpo: {type: String, required: false},
-            city: {type: String, required: true},
-            state: {type: String, required: true},
-            cp: {type: String, required: true},
-            formal_state_name: {type: String, required: true},
-        },
+    formal_sub_name: { type: String, required: true, unique: true },
+    subdelegacion_id: { type: Number, required: true, min: 1, max: 80 },
+    delegacion_id: { type: Number, required: true, min: 1, max: 40 },
+    ciz_id: { type: Number, required: true, enum: [1, 2, 3] },
+    with_ofi_cob: { type: Boolean, required: true },
+    old_address: { type: String, required: false, default: '' },
+    new_address: { type: String, required: false, default: '' },
+    standard_address: { type: String, required: false, default: '' },
+    street: { type: String, required: false, default: '' },
+    street_num: { type: String, required: false, default: '' },
+    reference: { type: String, required: false, default: '' },
+    col: { type: String, required: false, default: '' },
+    mpo: { type: String, required: false, default: '' },
+    city: { type: String, required: false, default: '' },
+    state: { type: String, required: false, default: '' },
+    country: { type: String, required: false, default: '' },
+    cp: { type: String, required: false, default: '' },
+    formal_state_name: { type: String, required: false, default: '' },
+    created_at: { type: Date, required: true},
+    updated_at: { type: Date, required: true}
 })
 
 // 'sub' will be the name of the collection on Mongo database
