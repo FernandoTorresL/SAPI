@@ -4,17 +4,30 @@ const Model = require('../model/sub_model');
 
 module.exports = router
 
+
 // Post method
 router.post('/post', async (req, res) => {
+    
     const sub = new Model({
-        name: req.body.name,
+        formal_sub_name: req.body.sub_name,
         subdelegacion_id: req.body.subdelegacion_id,
         delegacion_id: req.body.delegacion_id,
-        num_sub: req.body.num_sub,
-        old_address: req.body.old_address,
-        new_address: req.body.new_address,
-        status: req.body.status
-    })
+        ciz_id: req.body.ciz_id,
+        with_ofi_cob: req.body.with_ofi_cobros,
+        address: {
+            old_address: req.body.address[0].old_address,
+            new_address: req.body.address[0].new_address,
+            street: req.body.address[0].street,
+            street_num: req.body.address[0].street_num,
+            reference: req.body.address[0].reference,
+            col: req.body.address[0].col,
+            mpo: req.body.address[0].mpo,
+            city: req.body.address[0].city,
+            state: req.body.address[0].state,
+            cp: req.body.address[0].cp,
+            formal_state_name: req.body.address[0].formal_state_name,
+        }
+    });
 
     try {
         const SubdelegacionToSave = await sub.save();
@@ -71,6 +84,17 @@ router.delete('/delete/:id', async (req, res) => {
         const id = req.params.id;
         const data = await Model.findByIdAndDelete(id)
         res.send(`Document with ${data.name} has been deleted..`)
+    }
+    catch (error) {
+        res.status(400).json({ message: error.message })
+    }
+})
+
+// Delete All method
+router.delete('/delete', async (req, res) => {
+    try {
+        const data = await Model.deleteMany();
+        res.send(`All Documents has been deleted..`)
     }
     catch (error) {
         res.status(400).json({ message: error.message })

@@ -1,34 +1,47 @@
 const mongoose = require('mongoose');
 
 const SubdelSchema = new mongoose.Schema({
-    name: {
+
+    formal_sub_name: {
+        type: String,
         required: true,
-        type: String
+        unique: true,
     },
     subdelegacion_id: {
+        type: Number,
         required: true,
-        type: Number
+        min: 1,
+        max: 80,
     },
     delegacion_id: {
+        type: Number,
         required: true,
-        type: Number
+        min: 1,
+        max: 40,
     },
-    old_address: {
+    ciz_id: {
+        type: Number,
         required: true,
-        type: String
+        enum: [1, 2, 3],
     },
-    new_address: {
-        required: false,
-        type: String
-    },
-    num_sub: {
+    with_ofi_cob: {
+        type: Boolean,
         required: true,
-        type: Number
     },
-    status: {
-        required: true,
-        type: Boolean
-    }
+    address:
+        {
+            old_address: {type: String, required: true},
+            new_address: {type: String, required: true},
+            street: {type: String, required: true},
+            street_num: {type: String, required: true},
+            reference: {type: String, required: true},
+            col: {type: String},
+            mpo: {type: String, required: false},
+            city: {type: String, required: true},
+            state: {type: String, required: true},
+            cp: {type: String, required: true},
+            formal_state_name: {type: String, required: true},
+        },
 })
 
 // 'sub' will be the name of the collection on Mongo database
