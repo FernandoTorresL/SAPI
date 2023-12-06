@@ -1,14 +1,13 @@
 {
   "name": "sapi",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "Full Node.js demo REST API for 'Subdelegaciones IMSS'. New exercise based on \"Let's Build a Node.js REST API\" blog serie from Victoria Lo",
   "engines": {
     "node": "21.1.0"
   },
   "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "startn": "nodemon index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -36,6 +35,7 @@
     "express": "^4.18.2",
     "helmet": "^7.1.0",
     "mongoose": "^8.0.0",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "validator": "^13.11.0"
   }
 }
